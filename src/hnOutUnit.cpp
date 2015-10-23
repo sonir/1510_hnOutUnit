@@ -23,14 +23,18 @@ void hnOutUnit::bang(){
 
 float hnOutUnit::getCurrent(){
     
-    
     float val = adsr.getCurrent();
     return offsetChk(val);
-
     
 }
 
-
+void hnOutUnit::setOffset(float val){
+#ifdef DEBUG
+    std::cout << "offset set:" << val << std::endl;
+#endif//
+    offset = val;
+    
+}
 
 float hnOutUnit::offsetChk(float val){
     

@@ -11,13 +11,14 @@ class hnOutUnit {
         float update();
         void bang();
         float getCurrent();
+        void setOffset(float val);
     
         slAdsr adsr;
-        float offset=0.0;
     
     
     private:
         float offsetChk(float val);
+        float offset=0.0;
 
     
 };
